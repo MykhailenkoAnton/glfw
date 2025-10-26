@@ -101,9 +101,9 @@ project "GLFW"
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
-		buildoptions { "/MTd" }
+		--buildoptions { "/MDd" } --temp fix for CRT dependency
 
-	filter { "system:windows", "configurations:Debug-AS" }	
+	filter { "system:windows", "configurations:Debug-AS" }
 		runtime "Debug"
 		symbols "on"
 		sanitize { "Address" }
